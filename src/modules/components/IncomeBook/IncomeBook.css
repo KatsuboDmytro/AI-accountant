@@ -1,0 +1,52 @@
+.income-book {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  min-width: 350px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: sans-serif;
+  height: fit-content;
+}
+
+.income-book__title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.income-book__section {
+  background-color: #2a2a2a;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.income-book__section h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.money {
+  color: #7dfc9f;
+  font-weight: bold;
+}
+
+.tax {
+  color: #fc7d7d;
+  font-weight: bold;
+}
+
+.income-book__footer {
+  background-color: #262626;
+  padding: 1rem;
+  border-top: 1px solid #333;
+  text-align: center;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  color: #f0f0f0;
+}

@@ -1,0 +1,182 @@
+.calendar {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+  padding: 1rem;
+  font-family: sans-serif;
+  width: 450px;
+  height: calc(100vh - 250px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calendar__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.calendar__nav-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.calendar__nav-button:hover {
+  background-color: #444;
+}
+
+/* Вертикальний список місяців */
+.calendar__months {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Один місяць */
+.calendar__month {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Активний місяць (поточний) */
+.calendar__month.active-month {
+  opacity: 1;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #007acc66;
+}
+
+/* Інші — затемнені */
+.calendar__month.faded-month {
+  opacity: 0.4;
+}
+
+/* Заголовок місяця */
+.month__header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Дні тижня */
+.month__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 0.2rem;
+}
+
+.day__weekday {
+  padding: 0.2rem 0;
+}
+
+/* Дні місяця */
+.month__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.day {
+  text-align: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background 0.2s ease;
+  position: relative;
+  z-index: 0;
+}
+
+.day:hover {
+  background-color: #3a3a3a;
+}
+
+.day--today {
+  border: 1px solid #fff;
+  font-weight: bold;
+}
+
+.day--selected {
+  background-color: #007acc;
+  color: #fff;
+}
+
+.day--has-reminder {
+  box-shadow: inset 0 -3px 0 0 #ffa500;
+}
+
+.day__dot {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #ffa500;
+  border-radius: 50%;
+}
+
+/* Блок нагадувань */
+.calendar__reminders {
+  margin-top: 1rem;
+  background-color: #2f2f2f;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.reminders__title {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.reminders__list {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.reminders__form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reminders__input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.reminders__button {
+  padding: 0.5rem 1rem;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reminders__button:hover {
+  background-color: #005fa3;
+}
